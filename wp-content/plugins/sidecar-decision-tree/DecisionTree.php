@@ -198,7 +198,7 @@ class DecisionTree {
      */
     static function load_scripts(){
         wp_enqueue_script('decision_tree_js', 
-            plugins_url( '/decision_tree.js' , __FILE__ ), 
+            plugins_url( '/decision_tree_wpg.js' , __FILE__ ), 
             array('jquery', 'jquery-ui-core'));
     }
 
@@ -207,13 +207,13 @@ class DecisionTree {
      */
     static function load_admin_scripts(){
         wp_enqueue_script('decision_tree_js', 
-            plugins_url( '/decision_tree.js' , __FILE__ ), 
+            plugins_url( '/decision_tree_wpg.js' , __FILE__ ), 
             array('jquery', 'jquery-ui-core'));
         wp_enqueue_script('decision_tree_insert_tag_js', 
             plugins_url( '/decision_tree_insert_tag.js' , __FILE__ ), 
             array('jquery', 'jquery-ui-core'));
         wp_enqueue_script('decision_tree_admin_js', 
-            plugins_url( '/decision_tree_admin.js' , __FILE__ ), 
+            plugins_url( '/decision_tree_admin_wpg.js' , __FILE__ ), 
             array('jquery', 'jquery-ui-core', 'jquery-ui-dialog'));
         wp_enqueue_style( 'decision_tree_admin_style', 
             plugins_url( 'decision_tree_admin.css' , __FILE__ ) , false ); 
