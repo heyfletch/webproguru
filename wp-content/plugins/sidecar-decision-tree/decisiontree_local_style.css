@@ -1,0 +1,98 @@
+/* 
+            __            __       __                  __                         __                     __    __                         __         
+        .--|  .-----.----|__.-----|__.-----.-----.    |  |_.----.-----.-----.    |  |--.--.--.    .-----|__.--|  .-----.----.---.-.----. |  |_.--.--.
+        |  _  |  -__|  __|  |__ --|  |  _  |     |    |   _|   _|  -__|  -__|    |  _  |  |  |    |__ --|  |  _  |  -__|  __|  _  |   ___|   _|  |  |
+        |_____|_____|____|__|_____|__|_____|__|__|    |____|__| |_____|_____|    |_____|___  |    |_____|__|_____|_____|____|___._|__||__|____||___/ 
+                                                                                       |_____|                                                       
+                    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||                         
+                    ||||This is decision tree! A plugin for WordPress.  Find out more at http://sidecar.tv/decision_tree||||                         
+                    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||                                
+*/
+
+        .decision_tree_area .ui-state-active{            
+            background: #2E618D;
+            border-color: #000000;
+            border-left-style: inset;
+            color: #ffffff;
+        }
+        .decision_tree_area .ui-state-default{            
+            background: #428bca ;
+            border-color: #357ebd ;
+            color: #ffffff ;
+            min-width: 100px ;
+            background: #428bca ;
+        }
+       .decision_tree_area  .span.ui-button-text{
+            color: #ffffff;
+        }
+        .decision_tree_area .ui-state-hover   {
+            background: #2E618D;
+        }    
+        .decision_tree_area .ui-button{
+            margin-bottom: 10px;
+        }
+        .decision_tree_area .ui-widget{
+            font-size: 14px;
+        }
+        .dt_display_subtext{
+            font-size:12px;
+            font-family: Verdana,Arial,sans-serif;
+            margin-bottom: 10px;
+        }
+        .decision_tree_area .answer-success {
+            color: #ffffff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+        .decision_tree_area .answer-restart {
+            color: #ffffff;
+            background-color: #5a8fad;
+            border-color: black;
+        }
+        .decision_tree_area_donated  a {
+            font-size: .8em;
+            outline: 0px none;
+            border: 0px none;
+            text-decoration: none !important;
+            color: #767676;
+            
+        }
+        
+        .dt_button{
+            font-size:14px;
+            margin-bottom: 14px;
+            min-width: 100px;
+            max-width: 300px;
+            min-height: 32px;
+            line-height: 32px;
+            border-radius: 4px;
+            border: 1px solid #d3d3d3;
+            font-family: Verdana,Arial,sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            cursor: pointer;
+            vertical-align: middle;
+            text-align: center;
+            overflow: visible;           
+            padding: .4em 1em;            
+        }
+        .dt_radio_choice{
+            color: #ffffff;
+            background: #428bca;
+            border-color: #357ebd;
+        }
+        .dt_radio_answer{
+            color: #ffffff;
+            background: #5cb85c;
+            border-color: #4cae4c;
+        }
+        .dt_radio_choice:hover{
+            background-color: #2e618d;
+        }
+       .decision_tree_area .dt_display_title  {
+            font-size: 1.2em;
+            padding: 3px 0 6px 0;
+            color: #767676;
+       }

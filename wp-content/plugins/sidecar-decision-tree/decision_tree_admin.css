@@ -1,0 +1,179 @@
+/* 
+            __            __       __                  __                         __                     __    __                         __         
+        .--|  .-----.----|__.-----|__.-----.-----.    |  |_.----.-----.-----.    |  |--.--.--.    .-----|__.--|  .-----.----.---.-.----. |  |_.--.--.
+        |  _  |  -__|  __|  |__ --|  |  _  |     |    |   _|   _|  -__|  -__|    |  _  |  |  |    |__ --|  |  _  |  -__|  __|  _  |   ___|   _|  |  |
+        |_____|_____|____|__|_____|__|_____|__|__|    |____|__| |_____|_____|    |_____|___  |    |_____|__|_____|_____|____|___._|__||__|____||___/ 
+                                                                                       |_____|                                                       
+                    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||                         
+                    ||||This is decision tree! A plugin for WordPress.  Find out more at http://sidecar.tv/decision_tree||||                         
+                    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||                                
+*/
+
+
+.number_circle {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+    float: left;
+    margin: 20px 0 10px 2px;
+    text-indent: 0;
+    background: #eeeeee;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+    font-weight:bolder;
+}
+.number_circle_small {
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+    display: block;
+    float: left;
+    margin: 5px 0px 10px 8px;
+    text-indent: 0;
+    background: #eeeeee;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+    font-weight:bolder;
+}
+.decision_tree_choice_block{
+    
+}
+.description-decision-tree{
+    width:90px;
+}
+
+.decision_tree_row:before, .decision_tree_row:after{
+	display:table;
+	content: "";
+}
+.decision_tree_row:after{
+	clear: both;
+}
+.decision_tree_row {
+  *zoom: 1;
+}
+.decision_tree_cell{
+    float:left;
+    margin-right: 2px;
+}
+.decision_tree_cell_one{
+    width:60px;
+}
+.decision_tree_cell_label{
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 3px;
+    min-width: 41px;
+}
+.decision_tree_choice_area{
+    background-color: rgb(241, 241, 241);
+    margin-right: 10px;
+    margin-top: 6px;
+    padding-bottom: 5px;
+    border-style:groove;
+    margin-left: 20px;
+    border-width: 1px;
+    position: relative;
+}
+.decision_tree_choice_add{
+    margin-top: 6px;
+    margin-left: 20px;
+}
+.decision_tree_step_box{
+    margin-bottom: 20px;
+    position: relative;
+    width:auto;
+}
+.decision_tree_next_select{
+    max-width: 280px;
+    width: 220px; 
+}
+.decision_tree_remove_step{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding:2px;
+    cursor:pointer;
+    color:red;
+}
+.decision_tree_remove_choice{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding:5px;
+    cursor:pointer;
+    color:red;
+}
+
+.decision_tree_textfield_error {
+    background: #FFBABA !important;
+}
+
+#dt_preview_button {
+    margin:10px;
+}
+.dtree_entry_error_dialog .ui-dialog-titlebar {
+    background:red;
+}
+/*.menu-icon-decision_tree .wp-menu-image:after{   
+    font-family: FontAwesome;
+    content: '\f0e8';
+   display: inline-block;
+   font-size: 18px;
+   padding-left: 4px;
+   color: #999;
+   padding-top: 2px;
+     background: url('http://localhost/wordpress/wp-admin/images/menu.png?ver=20121105'); 
+}*/
+
+
+
+.dt_option_page_box{
+    background: #f5f5f5;
+    border-color: #dfdfdf;
+    margin: 20px 0;
+    padding: 2px 10px 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.dt_price_chart td,th{
+    text-align: left;
+    padding-right: 15px;
+}
+
+#dt_idonated_form .form-table th{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#dt_idonated_form .form-table td{
+    padding-left: 0px;
+}
+.dt_instruction_block{
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.dt_dashboard_box{
+
+    max-width: 400px;
+    margin-right: 40px;
+    background-color: #f5f5f5;
+    border-color: #dfdfdf;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.dt_simple_float{
+	float:left;
+}
