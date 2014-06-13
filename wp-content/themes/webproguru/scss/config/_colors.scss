@@ -9,6 +9,23 @@ $body-bg: #232323;
 $body-font-color: #fff;
 $header-font-color: $body-font-color;
 
+// Background color for the top bar
+$topbar-bg-color: #f1f1f1;
+// $topbar-bg: $topbar-bg-color;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: $body-bg;
+$topbar-link-color-hover: $topbar-link-color;
+$topbar-link-color-active: $topbar-link-color;
+$topbar-link-color-active-hover: $topbar-link-color;
+
+
+
+
+
+
+
+
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
