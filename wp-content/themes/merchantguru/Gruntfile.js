@@ -1,6 +1,12 @@
 'use strict';
 module.exports = function(grunt) {
 
+  // Time how long tasks take
+  require('time-grunt')(grunt);
+
+  // Load tasks
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     jshint: {
       options: {
@@ -17,8 +23,6 @@ module.exports = function(grunt) {
         options: {
           style: 'compressed',
           compass: true,
-          // Source maps are available, but require Sass 3.3.0 to be installed
-          // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
           sourcemap: false
         },
         files: {
@@ -26,7 +30,28 @@ module.exports = function(grunt) {
             'assets/sass/app.scss'
           ]
         }
+      },
+      watch: {
+        options: {
+          style: 'compressed',
+          compass: true,
+          sourcemap: true
+        },
+        files: {
+          'assets/css/main.min.css': [
+            'assets/sass/app.scss'
+          ]
+        }
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12'],
+        map: 'assets/css/'
+      },
+      your_target: {
+        src: 'assets/css/main.min.css'
+      },
     },
     uglify: {
       dist: {
@@ -47,11 +72,12 @@ module.exports = function(grunt) {
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]
-        },
+        }
+      },
+      watch: {
         options: {
-          // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-          // sourceMap: 'assets/js/scripts.min.js.map',
-          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+          sourceMap: 'assets/js/scripts.min.js.map',
+          sourceMappingURL: '/wp-content/themes/merchantguru/assets/js/scripts.min.js.map'
         }
       }
     },
@@ -70,7 +96,7 @@ module.exports = function(grunt) {
           'assets/sass/*.scss',
           'assets/sass/bootstrap/*.scss'
         ],
-        tasks: ['sass', 'version']
+        tasks: ['sass', 'autoprefixer', 'version']
       },
       js: {
         files: [
@@ -79,10 +105,8 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'uglify', 'version']
       },
       livereload: {
-        // Browser live reloading
-        // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.min.css',
@@ -100,18 +124,11 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load tasks
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-wp-version');
-
   // Register tasks
   grunt.registerTask('default', [
     'clean',
     'sass',
+    'autoprefixer',
     'uglify',
     'version'
   ]);
