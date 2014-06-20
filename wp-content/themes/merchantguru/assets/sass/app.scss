@@ -2,90 +2,141 @@
  * Roots 6.5.2
  */
 
+// Override Bootstrap Variables:
+$body-bg:                 #222;
+$text-color:              #e9e9e9;
+// $primary-color:           $text-color; //#ff7112;
+// $link-color:              $text-color;
+$brand-warning:           #F5BE0F;
+$font-size-base:          18px;
+$font-size-small:         ceil(($font-size-base * 0.75)) !default; // ~14px
+$font-family-sans-serif:  "quatro-slab", sans-serif;
+
+// Custom Variables:
+$bold:                    600;
+$normal:                  300;
+$letter-spacing:          1px;
+$primary-color-light:     #fccfb5;
+$footer-height:           110px;
+$macbook-air-11-height:   768px;
+$macbook-air-13-height:   900px;
+$block-shadow:            #555;
+
 $bootstrap-sass-asset-helper: false;
 @import "bootstrap/bootstrap";
+// @import "icomoon";
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-
+/* =====    Base    ===== */
 body { }
 
 
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
+/* =====    Header    ===== */
 .banner { }
 
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
+/* =====    Content    ===== */
 .content { }
 
+.home {
+   text-align: center;
+}
+
+.home h1 {
+  font-family: "quatro-slab";
+  font-size: 6.2vw;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  // smooth multi-color block text-shadows: 
+  // #62B445 1px 1px 0, #62B445 2px 2px 0, #62B445 3px 3px 0, #45A5F6 4px 4px 0, #45A5F6 5px 5px 0, 5px 8px 10px rgba(0, 0, 0, 0.35)
+ }
+
+.page-header {
+  border-bottom: none;
+}
+
+.slanted {
+  font-family: "reklame-script";
+  font-size: 24px;
+  font-style: italic; 
+  letter-spacing: 2px;
+  transform: rotate(-12deg);
+  margin-bottom: 55px;
+}
+
+/* Decision Tree Form Styling */
+.decision_tree_area {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.dt_display_question {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.dt_display_subtext {
+  font-size: 16px;
+  color: #777;
+}
+
+#dt_choice_set_6 {
+  margin-top: 25px;
+}
+
+.tree-answer {
+  font-size: 32px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 500px;
+}
+
+.answer-restart {
+  margin-top: 100px;
+}
 
 
-/* ==========================================================================
-   Primary Content
-   ========================================================================== */
-
+/* =====    Primary Content    ===== */
 .main { }
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
 
-
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-
+/* =====    Sidebar    ===== */
 .sidebar { }
 
-
-
-/* ==========================================================================
-   Posts
-   ========================================================================== */
-
+/* =====    Posts    ===== */
 .hentry header { }
 .hentry time { }
 .hentry .byline { }
 .hentry .entry-content { }
 .hentry footer { }
 
-
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
+/* =====    Footer    ===== */
 .content-info { }
 
 
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
-
+/* =====    WordPress Generated Classes http://codex.wordpress.org/CSS#WordPress_Generated_Classes    ===== */
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
+/* =====    Media Queries    ===== */
 @media (min-width: $screen-sm-min) { }
+.home h1 {
+    text-shadow: $block-shadow 1px 1px 0, $block-shadow 2px 2px 0;
+}
 
-@media (min-width: $screen-md-min) { }
+@media (min-width: $screen-md-min) { 
+.home h1 {
+  text-shadow: $block-shadow 1px 1px 0, $block-shadow 2px 2px 0, $block-shadow 3px 3px 0, $block-shadow 4px 4px 0;
+}
+
+}
 
 @media (min-width: $screen-lg-min) { }
+
+
+
+
