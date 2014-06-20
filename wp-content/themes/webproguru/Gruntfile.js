@@ -66,17 +66,30 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options: {
-        livereload: true,
+
+      sass: {
+        files: [
+          'scss/app.scss'
+        ],
+        tasks: [
+          'sass', 
+          'autoprefixer'
+          ]
       },
 
-      grunt: { files: ['Gruntfile.js'] },
+      js: {
+        files: [
+
+        ],
+        tasks: [
+        
+        ]
+      },
       
       php: { files: ['**/*.php'] },
 
-      sass: {
-        files: 'scss/**/*.scss',
-        tasks: ['sass', 'autoprefixer']
+      options: {
+        livereload: true,
       }
     }
   });
@@ -88,7 +101,29 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('build', ['sass', 'autoprefixer']);
-  grunt.registerTask('default', ['copy', 'uglify', 'concat', 'watch']);
+  // grunt.registerTask('build', ['sass', 'autoprefixer']);
+  // grunt.registerTask('default', ['copy', 'uglify', 'concat', 'watch']);
 
-}
+
+
+  // Register tasks
+  grunt.registerTask('default', [
+    'copy',
+    'uglify',
+    'concat',
+    'sass',
+    'autoprefixer',
+    // 'version'
+  ]);
+
+  grunt.registerTask('dev', [
+    'watch'
+  ]);
+
+
+
+
+
+
+
+};
